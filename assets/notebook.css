@@ -85,3 +85,5 @@ em { font-style: italic; color: var(--tomato); }
   .ink-mark::after { animation: none; transform: scaleX(1) rotate(-1deg); }
   .nb-doodle, .lp-sec-card, .lp-feature, .btn { animation: none !important; transform: none !important; }
 }
+.nb-made { font-family: var(--hand); font-size: 20px; color: var(--text-3); margin-top: 6px; }
+.nb-made a { color: var(--tomato); }

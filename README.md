@@ -1,5 +1,7 @@
 # Inkwell website (landing pages)
 
+Built and maintained by **[Sarbesh Kumar Tiwari](https://sarbeshtiwari.vercel.app)** · [GitHub](https://github.com/sarbeshtiwari)
+
 The public marketing site for Inkwell: the landing page, contact page, privacy policy, terms and 404 page.
 Plain HTML, CSS and a little JavaScript, with no framework and no build dependencies.
 
