@@ -11,7 +11,7 @@ const out = join(here, "_site");
 const site = (process.env.URL || "").replace(/\/$/, "");       // this site's address (set by Netlify)
 const app = (process.env.APP_URL || "").replace(/\/$/, "");     // the app's Netlify address (netlify.toml)
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-const operator = esc(process.env.OPERATOR_NAME || "the Reachout team"), jurisdiction = esc(process.env.JURISDICTION || "India");
+const operator = esc(process.env.OPERATOR_NAME || "the Inkwell team"), jurisdiction = esc(process.env.JURISDICTION || "India");
 if (!site || !app) throw new Error("URL (set by Netlify) and APP_URL (netlify.toml) are required");
 
 rmSync(out, { recursive: true, force: true });
@@ -29,7 +29,7 @@ for (const [src, dest] of [["landing.html", "index.html"], ["contact.html", "con
 }
 
 writeFileSync(join(out, "site.webmanifest"), JSON.stringify({
-  name: "Reachout", short_name: "Reachout", start_url: "/", display: "standalone", background_color: "#fbfaf7", theme_color: "#0f6b54",
+  name: "Inkwell", short_name: "Inkwell", start_url: "/", display: "standalone", background_color: "#fffefd", theme_color: "#f25c3b",
   icons: [{ src: "/assets/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "/assets/icon-512.png", sizes: "512x512", type: "image/png" }],
 }));
 writeFileSync(join(out, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${site}/sitemap.xml\n`);

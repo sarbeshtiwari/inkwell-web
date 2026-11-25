@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Privacy policy · Reachout</title>
-<meta name="description" content="What Reachout collects, why, where it's stored, who processes it, how long it's kept, and how to see, export or delete it.">
+<title>Privacy policy · Inkwell</title>
+<meta name="description" content="What Inkwell collects, why, where it's stored, who processes it, how long it's kept, and how to see, export or delete it.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{{SITE_URL}}/privacy">
 <meta name="theme-color" content="#0f6b54">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="stylesheet" href="/assets/legal.css">
+<link rel="stylesheet" href="/assets/notebook.css">
 </head>
 <body class="legal">
 <a class="skip" href="#main">Skip to content</a>
 <header class="lg-nav"><div class="wrap">
-  <a href="/" class="brand-mark"><span class="logo" data-icon="logo"></span>Reachout</a>
+  <a href="/" class="brand-mark"><span class="logo" data-icon="logo"></span>Inkwell</a>
   <span class="sp"></span>
   <a href="/terms" class="btn btn-ghost">Terms</a>
   <a href="/signup" class="btn btn-primary">Get started</a>
@@ -27,7 +28,7 @@
 <section class="lg-hero"><div class="wrap">
   <p class="eyebrow">Legal</p>
   <h1>Privacy policy</h1>
-  <p>Last updated 1 October 2026. Reachout is operated by {{OPERATOR}} (“we”, “us”). This policy explains what we collect when you use Reachout, why, and the choices you have.</p>
+  <p>Last updated 1 October 2026. Inkwell is operated by {{OPERATOR}} (“we”, “us”). This policy explains what we collect when you use Inkwell, why, and the choices you have.</p>
 </div></section>
 
 <div class="wrap lg-body">
@@ -51,7 +52,7 @@
     <div class="lg-sum" id="short">
       <p>The short version</p>
       <ul>
-        <li>We store only what Reachout needs to work, and everything is encrypted before it's stored.</li>
+        <li>We store only what Inkwell needs to work, and everything is encrypted before it's stored.</li>
         <li>Your mailbox is read <b>read-only</b>. We never send email you didn't ask for, and never mark messages as read.</li>
         <li>We don't sell your data, show ads, or use your data to train AI models.</li>
         <li>You can delete your account at any time; everything is removed with it.</li>
@@ -75,9 +76,9 @@
     </table>
 
     <h2 id="mailbox">Your mailbox</h2>
-    <p>When you connect Gmail or another provider with an app password, Reachout signs in to your mailbox <b>read-only</b> to:</p>
+    <p>When you connect Gmail or another provider with an app password, Inkwell signs in to your mailbox <b>read-only</b> to:</p>
     <ul>
-      <li>find replies to emails you sent through Reachout;</li>
+      <li>find replies to emails you sent through Inkwell;</li>
       <li>recognise job application updates (applied, in review, assessment, interview, offer, rejected) and job alerts;</li>
       <li>group your inbox by company for Inbox insights.</li>
     </ul>
@@ -86,7 +87,7 @@
     <h2 id="use">How we use it</h2>
     <ul>
       <li>To provide the features you use, including scheduled work such as the morning sync.</li>
-      <li>To keep Reachout secure: sign-in codes, rate limits, and detecting abuse.</li>
+      <li>To keep Inkwell secure: sign-in codes, rate limits, and detecting abuse.</li>
       <li>To send you service emails, such as sign-in codes and notifications you turned on.</li>
       <li>To find and fix errors.</li>
     </ul>
@@ -95,18 +96,18 @@
     <h2 id="security">How it's protected</h2>
     <ul>
       <li>Your data is encrypted before it's stored, with a key kept separately from the database. Email addresses are looked up by a keyed fingerprint, not stored in plain text.</li>
-      <li>There are no passwords to steal: you sign in with one-time codes. Sign-in cookies are HttpOnly and sent only over HTTPS.</li>
+      <li>Passwords are stored only as salted scrypt hashes, never in plain text. Sign-in cookies are HttpOnly and sent only over HTTPS.</li>
       <li>Every workspace is private to its owner. Pages carry strict security headers, and sign-in attempts, messages and requests are rate-limited.</li>
     </ul>
     <p>No system is perfectly secure. If we learn of a breach affecting your data, we'll tell you and the relevant authorities as the law requires.</p>
 
     <h2 id="processors">Services we use</h2>
-    <p>These providers process data on our behalf, only to run Reachout:</p>
+    <p>These providers process data on our behalf, only to run Inkwell:</p>
     <table>
       <thead><tr><th>Provider</th><th>What for</th></tr></thead>
       <tbody>
         <tr><td>MongoDB Atlas</td><td>Database hosting (stores encrypted data)</td></tr>
-        <tr><td>Render</td><td>Runs the Reachout server</td></tr>
+        <tr><td>Render</td><td>Runs the Inkwell server</td></tr>
         <tr><td>Netlify</td><td>Delivers the website and app pages</td></tr>
         <tr><td>Our email provider</td><td>Sends sign-in codes and service emails</td></tr>
         <tr><td>Sentry (if enabled)</td><td>Error reports, without message contents, cookies or form data</td></tr>
@@ -131,7 +132,7 @@
       <li>Account data: until you delete your account.</li>
       <li>Sign-in codes: 10 minutes. Rate-limit counters: a few days at most.</li>
       <li>When you delete your account, your data is removed from the live database immediately. Copies in encrypted database backups disappear as those backups expire on their regular schedule.</li>
-      <li>Enquiries sent through Reachout's own contact form: until we've dealt with them and delete them.</li>
+      <li>Enquiries sent through Inkwell's own contact form: until we've dealt with them and delete them.</li>
     </ul>
 
     <h2 id="rights">Your rights</h2>
@@ -146,10 +147,10 @@
     <p>To use these rights, <a href="/contact">contact us</a>. We reply within 30 days.</p>
 
     <h2 id="others">People in your contacts</h2>
-    <p>If you upload contacts or message people through Reachout, you decide whose data is processed and why, and you're responsible for having a lawful reason to contact them. Reachout never guesses or scrapes email addresses. If you believe your details are in someone's Reachout account and want them removed, <a href="/contact">contact us</a> and we'll help.</p>
+    <p>If you upload contacts or message people through Inkwell, you decide whose data is processed and why, and you're responsible for having a lawful reason to contact them. Inkwell never guesses or scrapes email addresses. If you believe your details are in someone's Inkwell account and want them removed, <a href="/contact">contact us</a> and we'll help.</p>
 
     <h2 id="children">Children</h2>
-    <p>Reachout isn't meant for anyone under 18, and we don't knowingly collect their data.</p>
+    <p>Inkwell isn't meant for anyone under 18, and we don't knowingly collect their data.</p>
 
     <h2 id="changes">Changes and contact</h2>
     <p>If we change this policy in a meaningful way, we'll update the date above and announce it on this site before it takes effect. For any privacy question, write to us through the <a href="/contact">contact page</a>.</p>
@@ -158,10 +159,11 @@
 </main>
 
 <footer class="lg-foot"><div class="wrap">
-  <span>© 2026 Reachout</span><span class="sp"></span>
+  <span>© 2026 Inkwell</span><span class="sp"></span>
   <a href="/">Home</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
 </div></footer>
 <script src="/assets/common.js"></script>
 <script src="/assets/legal.js"></script>
+<script src="/assets/notebook.js"></script>
 </body>
 </html>

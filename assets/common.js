@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 const ICONS = {
-  logo: '<path d="M7 20v-9a4 4 0 0 1 4-4h7.5"/><path d="m15 3.5 3.5 3.5-3.5 3.5"/>',
+  logo: '<path d="M5.5 21.5h13v-4.6a3.6 3.6 0 0 0-2.8-3.5v-2.2H8.3v2.2a3.6 3.6 0 0 0-2.8 3.5z"/><path d="M7.6 17.4h8.8"/><path d="M12 9.6 9.4 5.6 12 1.8l2.6 3.8z"/><path d="M12 9.6V6.4"/>',
   home: '<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
   send: '<path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/>',
   users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',

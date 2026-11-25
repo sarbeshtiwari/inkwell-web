@@ -65,7 +65,7 @@
     wrap.innerHTML = `
       <button class="enq-fab" id="enqFab" aria-haspopup="dialog" aria-controls="enqPanel" aria-expanded="false">${icon("message")}<span>Have a question?</span></button>
       <div class="enq-panel" id="enqPanel" role="dialog" aria-modal="false" aria-labelledby="enqTitle" hidden>
-        <div class="enq-head"><div><h2 id="enqTitle">Talk to us</h2><p>Questions about Reachout? Send a message and we'll get back to you.</p></div>
+        <div class="enq-head"><div><h2 id="enqTitle">Talk to us</h2><p>Questions about Inkwell? Send a message and we'll get back to you.</p></div>
           <button class="btn btn-ghost btn-icon btn-sm" id="enqClose" aria-label="Close">${icon("x")}</button></div>
         <form class="enq-form" id="enqForm"></form>
       </div>`;

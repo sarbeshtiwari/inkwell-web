@@ -1,9 +1,9 @@
-# Reachout website (landing pages)
+# Inkwell website (landing pages)
 
-The public marketing site for Reachout: the landing page, contact page, privacy policy, terms and 404 page.
+The public marketing site for Inkwell: the landing page, contact page, privacy policy, terms and 404 page.
 Plain HTML, CSS and a little JavaScript, with no framework and no build dependencies.
 
-**What Reachout is:** one place for outreach and the job search. Users send personal email (and optionally
+**What Inkwell is:** one place for outreach and the job search. Users send personal email (and optionally
 WhatsApp) messages from their own accounts, see who replied and what they want, track every job application
 from their inbox, get scored job matches, and build their own one-page website. Everything they store is
 encrypted, and sign-in uses one-time email codes.
@@ -19,7 +19,7 @@ encrypted, and sign-in uses one-time email codes.
 | File | URL | What's on it |
 |---|---|---|
 | `landing.html` | `/` | Hero, features, product tour, website builder demo, security, how it works, FAQ |
-| `contact.html` | `/contact` | Contact form → Reachout's own enquiries (admins see them in Leads) |
+| `contact.html` | `/contact` | Contact form → Inkwell's own enquiries (admins see them in Leads) |
 | `privacy.html` | `/privacy` | Privacy policy |
 | `terms.html` | `/terms` | Terms of use |
 | `404.html` | any unknown URL | Not-found page |

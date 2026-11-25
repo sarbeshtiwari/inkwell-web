@@ -1,0 +1,87 @@
+/* Notebook design (from sarbeshtiwari.vercel.app) for Inkwell's public pages: warm paper, tomato accent, serif headlines,
+   handwritten notes, pill buttons that lean on hover, tape, a highlighter swipe and doodles. Loaded after style.css. */
+:root {
+  --paper-tint: #f6f2ea; --paper-edge: #ece5d7; --tomato: #f25c3b; --tomato-deep: #c8401f; --marigold: #f4b43a;
+  --sage: #7ba67a; --lake: #3e7b9e; --grape: #6b4e8a; --rose: #e89bae; --doodle-ink: #1a1715;
+  --bg: #fffefd; --bg-subtle: #f6f2ea; --bg-muted: #ece5d7;
+  --text: #1a1715; --text-2: #2f2a26; --text-3: #4a433d; --text-4: #7a7268;
+  --border: #ece5d7; --border-strong: #d8cfbd;
+  --accent: #f25c3b; --accent-2: #3e7b9e; --accent-hover: #c8401f; --accent-soft: #fde7e0; --accent-text: #b23a1c;
+  --grad: linear-gradient(var(--accent), var(--accent));
+  --glow: 0 6px 18px rgb(242 92 59 / .28);
+  --shadow-sm: 0 4px 10px rgb(40 30 20 / .08), 0 2px 4px rgb(40 30 20 / .05);
+  --shadow-md: 0 10px 26px -8px rgb(40 30 20 / .16);
+  --shadow-lg: 0 24px 56px rgb(40 30 20 / .2), 0 8px 18px rgb(40 30 20 / .12);
+  --ring: 0 0 0 3px rgb(242 92 59 / .22);
+  --serif: "IBM Plex Serif", "Iowan Old Style", Georgia, serif;
+  --hand: "Caveat", "Bradley Hand", "Segoe Print", cursive;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --blend: multiply;
+}
+:root[data-theme="dark"] {
+  --paper-tint: #1e1a16; --paper-edge: #2c2620; --doodle-ink: #f0ebe0;
+  --bg: #14110e; --bg-subtle: #1e1a16; --bg-muted: #2c2620;
+  --text: #f0ebe0; --text-2: #ddd5c7; --text-3: #b8b0a2; --text-4: #8a8174;
+  --border: #2c2620; --border-strong: #3d352d;
+  --accent: #f25c3b; --accent-hover: #f6866b; --accent-soft: #3a1d14; --accent-text: #f6866b;
+  --shadow-sm: 0 4px 12px rgb(0 0 0 / .35); --shadow-lg: 0 24px 56px rgb(0 0 0 / .55);
+  --blend: screen;
+}
+::selection { background: rgb(242 92 59 / .22); }
+:focus-visible { outline: 2px dashed var(--tomato); outline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: -.015em; }
+h3 { font-family: var(--serif); font-weight: 600; letter-spacing: 0; }
+em { font-style: italic; color: var(--tomato); }
+
+/* buttons */
+.btn { border-radius: 999px !important; transition: transform 280ms var(--ease-spring), background .2s, color .2s, box-shadow .28s; }
+.btn-primary { background: var(--tomato); color: #fffefd; box-shadow: var(--glow); }
+.btn-primary:hover { background: var(--tomato-deep); filter: none; transform: translateY(-2px) rotate(-1deg); }
+.btn:not(.btn-primary):hover { transform: translateY(-2px) rotate(1deg); }
+
+/* hero: paper, centred serif statement with an italic tomato phrase, highlighter, doodles */
+.lp-aurora, .lp-grid-bg { display: none !important; }
+.lp-hero h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.02em; }
+.lp-grad-text { color: var(--tomato); font-style: italic; font-weight: 600; background: none; -webkit-text-fill-color: currentColor; }
+.lp-pill { border-radius: 4px; background: var(--marigold); color: #1a1715; border: 0; transform: rotate(-2deg); font-family: var(--hand); font-size: 19px; box-shadow: 0 2px 6px rgb(40 30 20 / .15); }
+.lp-pill b { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; background: #1a1715; color: #fffefd; }
+.lp-pill:hover { transform: rotate(0) translateY(-1px); }
+.ink-mark { position: relative; white-space: nowrap; isolation: isolate; }
+.ink-mark::after { content: ""; position: absolute; left: -3%; right: -3%; bottom: .06em; height: .36em; z-index: -1; background: rgb(244 180 58 / .45);
+  border-radius: 40% 60% 45% 55% / 60% 40% 60% 40%; transform-origin: left; transform: scaleX(0) rotate(-1deg); animation: nb-mark 700ms ease-out 500ms forwards; }
+@keyframes nb-mark { to { transform: scaleX(1) rotate(-1deg); } }
+.lp-hero { position: relative; }
+.nb-doodle { position: absolute; width: 46px; height: 46px; color: var(--doodle-ink); pointer-events: none; z-index: 0; }
+.nb-doodle svg { width: 100%; height: 100%; }
+.nb-doodle.spiral { left: 6%; top: 120px; animation: nb-spin 18s linear infinite; }
+.nb-doodle.asterisk { right: 7%; top: 100px; animation: nb-wobble 4.5s steps(6) infinite; }
+.nb-doodle.star { right: 12%; top: 420px; width: 30px; height: 30px; animation: nb-wobble 5s steps(5) infinite reverse; }
+@keyframes nb-spin { to { transform: rotate(360deg); } }
+@keyframes nb-wobble { 0% { transform: rotate(-4deg); } 33% { transform: rotate(5deg); } 66% { transform: rotate(-2deg); } to { transform: rotate(-4deg); } }
+.nb-hand { font-family: var(--hand); font-size: 22px; color: var(--text-3); }
+
+/* section headings: mono kicker, wavy underline */
+.lp-sec h2, .lp-section h2 { position: relative; }
+.lp-kicker, .lp-eyebrow { font-family: var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--lake); }
+
+/* cards: paper, tape on top, a little tilt that straightens on hover */
+.lp-sec-card, .lp-feature, .lp-card, .card { border-radius: 10px; background: var(--bg); border: 1px solid var(--paper-edge); box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .35s var(--ease-spring), box-shadow .35s; }
+.lp-sec-card:nth-child(odd), .lp-feature:nth-child(odd) { transform: rotate(-.5deg); }
+.lp-sec-card:nth-child(even), .lp-feature:nth-child(even) { transform: rotate(.4deg); }
+.lp-sec-card:hover, .lp-feature:hover { transform: rotate(0) translateY(-4px); box-shadow: var(--shadow-lg); }
+.lp-sec-card::before, .lp-feature::before { content: ""; position: absolute; top: -9px; left: calc(50% - 40px); width: 80px; height: 18px; background: rgb(244 180 58 / .55); transform: rotate(-3deg); }
+.lp-sec-card:nth-child(4n+2)::before, .lp-feature:nth-child(4n+2)::before { background: rgb(123 166 122 / .5); transform: rotate(2deg); }
+.lp-sec-card:nth-child(4n+3)::before, .lp-feature:nth-child(4n+3)::before { background: rgb(232 155 174 / .55); }
+.lp-sec-card:nth-child(4n+4)::before, .lp-feature:nth-child(4n+4)::before { background: rgb(62 123 158 / .35); transform: rotate(3deg); }
+
+/* ink cursor trail */
+.blob-cursor { position: fixed; inset: 0; pointer-events: none; z-index: 9999; }
+.blob-cursor i { position: fixed; left: 0; top: 0; border-radius: 50%; mix-blend-mode: var(--blend); will-change: transform; }
+
+@media (max-width: 860px) { .nb-doodle { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .ink-mark::after { animation: none; transform: scaleX(1) rotate(-1deg); }
+  .nb-doodle, .lp-sec-card, .lp-feature, .btn { animation: none !important; transform: none !important; }
+}
